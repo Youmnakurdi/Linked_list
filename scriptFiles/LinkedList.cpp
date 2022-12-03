@@ -102,3 +102,18 @@ bool LinkedList::operator==(const LinkedList& l){
     return true;
 
 }
+
+short & LinkedList:: operator[] (int index){
+    ListNode* tmp=head;
+    for(int i=0;i<index;++i){
+        tmp=tmp->next;
+    }
+    return tmp->val;
+}
+const short LinkedList :: operator[] (int index) const{
+    ListNode* tmp=head;
+    for(size_t i=0;i<index;++i){
+        tmp=tmp->next;
+    }
+    return tmp->val;
+}
