@@ -17,8 +17,8 @@ class LinkedList{
         const short operator[](int index) const;
         
         bool operator==(const LinkedList& l);
-        //void push_back(short);
-        //void push_front(short);
+        void push_back(short);
+        void push_front(short);
         // int getSize()const;
         ostream& toOstream(ostream& out) const;
 

@@ -117,3 +117,16 @@ const short LinkedList :: operator[] (int index) const{
     }
     return tmp->val;
 }
+
+void LinkedList:: push_back(short elt){
+    ListNode* tmp=head;
+    for(size_t i=0;i<size-1;++i){
+        tmp=tmp->next;
+    }
+    tmp->next = new ListNode(elt);
+    size++;
+}
+void LinkedList :: push_front(short elt){
+    head = new ListNode(elt, head);
+    size++;
+}
