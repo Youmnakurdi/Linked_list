@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-
+#include <string>
 using std::vector;
 using std::ostream;
-
+using std::string;
 class LinkedList{
 
     public:
@@ -19,9 +19,9 @@ class LinkedList{
         bool operator==(const LinkedList& l);
         void push_back(short);
         void push_front(short);
-        // int getSize()const;
+        int getSize()const;
         ostream& toOstream(ostream& out) const;
-
+        LinkedList(const string&);
     private:
         struct ListNode {
         ListNode(short val, ListNode* next=nullptr)
